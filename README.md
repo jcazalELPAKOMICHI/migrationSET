@@ -28,3 +28,17 @@ una vez que le damos Import, la aplicación verifica si la tabla de contribuyent
 ![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img4.PNG)
 
 ![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img5.PNG)
+
+
+una vez que le demos ok, comenzara la insercón o actualización de Datos en la Base de Datos, si se cierra la aplicación no hay problemas ya que cuando comienza a hacer el recorrido, lo que hace es generar un batch por medio de PreparedStatement, y el batch solamente se ejecuta cuando termina de recorrer toda la tabla de la aplicación; osease cuando el batch termina de ser cargado, lo que se inserta en la Base de datos es el Batch...
+
+ ### Observaciones
+ 
+ sugiero que los archivos de la SET se guarden nuevamente con codificacion UTF-8 para no tener problemas con los acentos, al momento de realizar la importación.
+ 
+ ### Paso Finalizado
+ 
+ Cuando se termina de ejecutar el batch nos saldrá un mensaje de exito y podremos verificar en nuestra Base de Datos si los registros se encuentran en la misma. 
+ 
+ 
+ 
