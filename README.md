@@ -22,3 +22,9 @@ una vez cargados todos los datos nos saldra la pantalla de exito.
 una vez establecida la conexión con la Base de Datos, se nos habilita el boton para poder realizar la importación de nuestro archivo txt a la BD, pero antes debemos enlazar nuestro txt a la aplicación, para ello debemos establecer si lo que enlazamos corresponde a una persona juridica o fisica, y su delimitador que por el momento trae dos tipos "|" y tabulador. Esto sirve a la base de datos para poder definir y filtrar en los querys al momento de tomar una persona fisica y juridica. Seguidamente vemos como se nos visualiza en la aplicación los datos del txt.
 
 ![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img3.PNG)
+
+una vez que le damos Import, la aplicación verifica si la tabla de contribuyentes existe en la base de datos, sino existe, hay una opción que la aplicación da al cliente para poder generar y luego continuar con la importación
+
+![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img4.PNG)
+
+![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img5.PNG)
