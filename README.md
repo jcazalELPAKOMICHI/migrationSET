@@ -36,9 +36,12 @@ una vez que le demos ok, comenzara la insercón o actualización de Datos en la 
  
  sugiero que los archivos de la SET se guarden nuevamente con codificacion UTF-8 para no tener problemas con los acentos, al momento de realizar la importación.
  
+ ### OPTIONS
+ En este apartado, agregue una opción para que puedan hacer el calculo de Dígito verificador y exportar a Excel.
+ 
  ### Paso Finalizado
  
  Cuando se termina de ejecutar el batch nos saldrá un mensaje de exito y podremos verificar en nuestra Base de Datos si los registros se encuentran en la misma. 
- 
+ ![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img6.PNG)
  
  
