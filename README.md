@@ -11,3 +11,10 @@ La misma hace los updates automáticos cuando en caso de que ya exista una base 
 
  ### Formas de Uso
 
+La aplicación en primer lugar pide los parámetros para poder conectarnos a la base de datos, por lo tanto ingresamos todos los datos que nos solicita, la aplicación valida que se carguen todos los datos.
+
+![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img1.PNG)
+
+una vez cargados todos los datos nos saldra la pantalla de exito.
+
+![alt text](https://github.com/jcazalELPAKOMICHI/migrationSET/blob/develop/capturas/img2.PNG)
