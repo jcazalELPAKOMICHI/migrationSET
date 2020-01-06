@@ -209,6 +209,8 @@ public class Importar extends javax.swing.JFrame {
 
         record.setEditable(false);
         record.setBackground(new java.awt.Color(255, 255, 255));
+        record.setEnabled(false);
+        record.setFocusable(false);
 
         jLabel8.setText("Record:");
 
@@ -434,8 +436,8 @@ public class Importar extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtDatabase, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtDatabase, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -829,17 +831,27 @@ public class Importar extends javax.swing.JFrame {
 
                     record.setText(String.valueOf(formato.format(in + 1)));
                     hilo = new Cargar(getProgreso(), Integer.parseInt(cant.getText().replace(".", "")), Integer.parseInt(record.getText().replace(".", "")));
+                    bandera = true;
                 } catch (Exception ex) {
                     jtContribuyente.getSelectionModel().setSelectionInterval(in, in);
                     jtContribuyente.scrollRectToVisible(new Rectangle(jtContribuyente.getCellRect(in, 0, true)));
-                    JOptionPane.showMessageDialog(this, "Error en la línea " + (in + 1), "Error", JOptionPane.ERROR_MESSAGE);
                     bandera = false;
+                    ps.clearBatch();
+                    record.setText("0");
+                    Progreso.setValue(0);
+                    Progreso.setString("0%");
+                    btnClear.setEnabled(true);
+                    btnEliminar.setEnabled(true);
+                    txtBuscador.setEnabled(true);
+                    btnAbrirTxt.setEnabled(true);
+                    JOptionPane.showMessageDialog(this, "Error en la línea " + (in + 1) + " El Ruc que Causa problemas es el: " + jtContribuyente.getValueAt(in, 1).toString(), "Error", JOptionPane.ERROR_MESSAGE);
+
                     break;
                 }
             }
 
-            ps.executeBatch();
             if (bandera) {
+                ps.executeBatch();
                 JOptionPane.showMessageDialog(this, "Han sido Insertados: " + cguardado + " Registros", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
                 for (int i = jtContribuyente.getRowCount() - 1; i >= 0; i--) {
                     modelo.removeRow(i);
