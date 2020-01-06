@@ -85,7 +85,7 @@ public class CalcularDv extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtRucKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtRucKeyReleased
-       int valor = Tools.calcularDV(txtRuc.getText(), 11);
+       int valor = Tools.calcularDV(txtRuc.getText().toUpperCase(), 11);
         txtDv.setText(String.valueOf(valor));
 
     }//GEN-LAST:event_txtRucKeyReleased

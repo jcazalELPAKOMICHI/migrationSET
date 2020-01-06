@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/desktop/importarSET/src/importarset/ImportarSET.java</file>
-            <file>file:/C:/desktop/importarSET/src/common/ScriptSql.java</file>
-            <file>file:/C:/desktop/importarSET/src/common/Cargar.java</file>
-            <file>file:/C:/desktop/importarSET/src/importarset/Importar.java</file>
-            <file>file:/C:/desktop/importarSET/src/common/Tools.java</file>
-            <file>file:/C:/desktop/importarSET/src/importarset/CalcularDv.java</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/src/common/Tools.java</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/build.xml</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/src/importarset/Importar.java</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/src/common/Cargar.java</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/src/importarset/ImportarSET.java</file>
+            <file>file:/C:/Users/xpg0834/Documents/Proyectos%20Android/personal/migrationSET/src/importarset/CalcularDv.java</file>
         </group>
     </open-files>
 </project-private>

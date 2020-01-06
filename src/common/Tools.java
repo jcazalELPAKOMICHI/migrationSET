@@ -1,12 +1,19 @@
 package common;
 
 import java.awt.Desktop;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import javax.swing.JFileChooser;
 import javax.swing.JTable;
+import javax.swing.JTextField;
+import javax.swing.RowFilter;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
+import javax.swing.table.TableRowSorter;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -92,6 +99,40 @@ public class Tools {
                 throw e;
             }
         }
+    }
+    TableRowSorter<TableModel> sorter;
+
+    public void Busqued(JTable tabla, DefaultTableModel modelo, JTextField cuadro) {
+
+        cuadro.addKeyListener(new KeyListener() {
+            @Override
+            public void keyTyped(KeyEvent e) {
+                //throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyPressed(KeyEvent e) {
+                // throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e) {
+                sorter = new TableRowSorter<>(modelo);
+                sorter.setRowFilter(RowFilter.regexFilter("(?i)" + "^" + cuadro.getText()));
+                tabla.setRowSorter(sorter);
+                tabla.getSelectionModel().setSelectionInterval(0, 0);
+            }
+
+        });
+
+    }
+
+    public void LimpiarBusqueda(JTextField busqueda, JTable table) {
+        if (!busqueda.getText().isEmpty()) {
+            sorter.setRowFilter(null);
+
+        }
+
     }
 
 }
